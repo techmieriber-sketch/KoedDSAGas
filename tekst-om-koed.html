@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tekst om kød</title>
-    <link rel="preload" href="../assets/koed-bg-16x9.png" as="image" />
+    <link rel="preload" href="koed-bg-16x9.png" as="image" />
     <style>
       html {
         margin: 0;
@@ -26,14 +26,8 @@
         position: fixed;
         inset: 0;
         z-index: 0;
-        background: #0f1b24;
+        background: #0f1b24 url('koed-bg-16x9.png') center/cover no-repeat;
         overflow: hidden;
-      }
-      .bg-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
       }
       .page-shell {
         position: relative;
@@ -133,7 +127,7 @@
     </style>
   </head>
   <body>
-    <div class="bg-media" aria-hidden="true"><img class="bg-image" src="../assets/koed-bg-16x9.png" alt="" fetchpriority="high" decoding="async"></div>
+    <div class="bg-media" aria-hidden="true"></div>
 
     <div class="page-shell">
     <main class="overlay">
