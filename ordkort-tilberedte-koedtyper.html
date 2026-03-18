@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ordkort – tilberedte kødtyper</title>
-    <link rel="preload" href="koed-bg-16x9.png" as="image" />
+    <link rel="preload" href="./assets/koed-bg-16x9.png" as="image" />
     <style>
       :root {
         --bg: #0f1115;
@@ -37,7 +37,7 @@
         position: fixed;
         inset: 0;
         z-index: 0;
-        background: #0f1b24 url('../assets/koed-bg-16x9.png') center/cover no-repeat;
+        background: #0f1b24 url('./assets/koed-bg-16x9.png') center/cover no-repeat;
         overflow: hidden;
       }
       .page-shell {
@@ -275,7 +275,7 @@
     </main>
 
     <script>
-      const assetFolder = "../tilberedte-koedtyper/";
+      const assetFolder = "./tilberedte-koedtyper/";
       const audioPlayer = new Audio();
 
       function getAudioFile(item) {
