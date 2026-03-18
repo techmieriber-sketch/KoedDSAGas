@@ -1,0 +1,64 @@
+TILBEREDTE-KOEDTYPER – KRÆVEDE FILER
+=====================================
+
+Denne mappe skal indeholde følgende billeder og lydfiler for at ordkort og vendespil fungerer på GitHub Pages.
+
+Billeder (jpg eller png):
+------------------------
+Andesteg.jpg
+Entrecôte.jpg
+Flæskesteg.png
+Forloren-hare.png
+Frikadeller.jpg
+Grillpølser.png
+Hakkebøffer.jpg
+Kalvesteg.jpg
+Karbonader.png
+Kebab.jpg
+Kyllingefileter.jpg
+Kødsovs.jpg
+Lammekoteletter.jpg
+Medisterpølse.png
+Osso-buco.png
+Pulled-pork.jpg
+Roastbeef.jpg
+Rullepølse.png
+Roegt-skinke.jpg
+Spegepølse.png
+Stegt-kylling.jpg
+Varm-leverposteg.png
+Wiener-Schnitzel.jpg
+
+Lydfiler (mp3):
+---------------
+Kød.mp3                    (bruges i tekst-om-koed.html)
+Andesteg.mp3
+Entrecôte.mp3
+Flæskesteg.mp3
+Forloren-hare.mp3
+Frikadeller.mp3
+Grillpølser.mp3
+Hakkebøffer.mp3
+Kalvesteg.mp3
+Karbonader.mp3
+Kebab.mp3
+Kyllingefileter.mp3
+Kødsovs.mp3
+Lammekoteletter.mp3
+Medisterpølse.mp3
+Osso-buco.mp3
+Pulled-pork.mp3
+Roastbeef.mp3
+Rullepølse.mp3
+Roegt-skinke.mp3
+Spegepølse.mp3
+Stegt-kylling.mp3
+Varm-leverpostej.mp3        (særlig fil – ikke Varm-leverposteg.mp3)
+Wienerschnitzel.mp3         (særlig fil – ikke Wiener-Schnitzel.mp3)
+
+INSTRUKTIONER:
+--------------
+1. Tilføj alle filer ovenfor til denne mappe (tilberedte-koedtyper/)
+2. Sørg for at filerne ligger i koed-mappen i DSA Gastronom
+3. Når du pusher til KoedDSAGas på GitHub, skal tilberedte-koedtyper-mappen med alle filer være med
+4. Mappen skal ligge på samme niveau som ordkort-tilberedte-koedtyper.html og vendespil-tilberedte-koedtyper.html
