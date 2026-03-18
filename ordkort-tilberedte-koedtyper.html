@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ordkort – tilberedte kødtyper</title>
-    <link rel="preload" href="./assets/koed-bg-16x9.png" as="image" />
+    <link rel="preload" id="bg-preload" href="" as="image" />
     <style>
       :root {
+        --bg-image: none;
         --bg: #0f1115;
         --card: rgba(255, 255, 255, 0.93);
         --card2: rgba(255, 255, 255, 0.97);
@@ -37,7 +38,7 @@
         position: fixed;
         inset: 0;
         z-index: 0;
-        background: #0f1b24 url('./assets/koed-bg-16x9.png') center/cover no-repeat;
+        background: #0f1b24 var(--bg-image) center/cover no-repeat;
         overflow: hidden;
       }
       .page-shell {
@@ -275,7 +276,26 @@
     </main>
 
     <script>
-      const assetFolder = "./tilberedte-koedtyper/";
+      const REPO_BASE =
+        location.hostname.endsWith("github.io")
+          ? `/${location.pathname.split("/").filter(Boolean)[0] || ""}`
+          : "";
+
+      function assetPath(relativePath) {
+        const clean = String(relativePath).replace(/^\/+/, "");
+        if (location.protocol === "file:") return clean;
+        return `${REPO_BASE}/${clean}`;
+      }
+
+      document.documentElement.style.setProperty(
+        "--bg-image",
+        `url("${assetPath("assets/koed-bg-16x9.png")}")`
+      );
+
+      const bgPreload = document.getElementById("bg-preload");
+      if (bgPreload) bgPreload.href = assetPath("assets/koed-bg-16x9.png");
+
+      const assetFolder = assetPath("tilberedte-koedtyper") + "/";
       const audioPlayer = new Audio();
 
       function getAudioFile(item) {
