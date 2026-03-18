@@ -7,6 +7,7 @@
     <link rel="preload" id="bg-preload" href="" as="image" />
     <style>
       :root {
+        --bg-image: none;
         --bg: #f7fbff;
         --panel: #ffffff;
         --panel2: #f2f6ff;
@@ -300,24 +301,26 @@
     </div>
 
     <script>
-      const REPO_BASE =
-        location.hostname.endsWith("github.io")
-          ? `/${location.pathname.split("/").filter(Boolean)[0] || ""}`
-          : "";
+      const ASSET_BASE = (() => {
+        if (location.protocol === "file:") return "";
+        const path = location.pathname;
+        const dir = path.replace(/\/[^/]*$/, "") || "/";
+        return dir.endsWith("/") ? dir : dir + "/";
+      })();
 
       function assetPath(relativePath) {
         const clean = String(relativePath).replace(/^\/+/, "");
         if (location.protocol === "file:") return clean;
-        return `${REPO_BASE}/${clean}`;
+        return ASSET_BASE + clean;
       }
 
       document.documentElement.style.setProperty(
         "--bg-image",
-        `url("${assetPath("assets/koed-bg-16x9.png")}")`
+        `url("${assetPath("koed-bg-16x9.png")}")`
       );
 
       const bgPreload = document.getElementById("bg-preload");
-      if (bgPreload) bgPreload.href = assetPath("assets/koed-bg-16x9.png");
+      if (bgPreload) bgPreload.href = assetPath("koed-bg-16x9.png");
 
       const IMAGE_FILES = [
         assetPath("tilberedte-koedtyper/Andesteg.jpg"),
